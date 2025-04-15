@@ -1,8 +1,15 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap' // for JS features like modals, collapse, etc.
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Import Bootstrap JS (for responsive navbar toggling)
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
 
 
-createApp(App).mount('#app')
